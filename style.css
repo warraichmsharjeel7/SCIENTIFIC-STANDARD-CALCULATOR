@@ -1,0 +1,120 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.display-font {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom scrollbar for displays */
+.custom-scroll::-webkit-scrollbar {
+    height: 3px;
+    width: 3px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+/* Base Glass Effect */
+.glass-container {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Button Animations & Micro-interactions */
+.calc-btn {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.calc-btn:active {
+    transform: scale(0.92);
+}
+
+/* ================= THEMES ================= */
+
+/* 1. Cyberpunk Theme (Default) */
+body.theme-cyber {
+    background: linear-gradient(135deg, #090d16 0%, #171c30 50%, #29153d 100%);
+}
+body.theme-cyber .glass-container {
+    background: rgba(13, 18, 30, 0.75);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+body.theme-cyber .display-box {
+    background: rgba(5, 8, 15, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+body.theme-cyber .btn-num { background: rgba(30, 41, 59, 0.6); color: #fff; border: 1px solid rgba(255,255,255,0.05); }
+body.theme-cyber .btn-num:hover { background: rgba(51, 65, 85, 0.8); box-shadow: 0 0 12px rgba(255,255,255,0.1); }
+body.theme-cyber .btn-op { background: rgba(99, 102, 241, 0.85); color: #fff; border: 1px solid rgba(129, 140, 248, 0.4); }
+body.theme-cyber .btn-op:hover { background: rgb(99, 102, 241); box-shadow: 0 0 15px rgba(99, 102, 241, 0.5); }
+body.theme-cyber .btn-eq { background: linear-gradient(to right, #8b5cf6, #6366f1); color: #fff; box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4); }
+body.theme-cyber .btn-sci { background: rgba(30, 41, 59, 0.8); color: #93c5fd; border: 1px solid rgba(255,255,255,0.05); }
+body.theme-cyber .btn-sci:hover { background: rgba(51, 65, 85, 0.9); box-shadow: 0 0 10px rgba(147, 197, 253, 0.3); }
+body.theme-cyber .btn-ac { background: rgba(244, 63, 94, 0.2); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.3); }
+body.theme-cyber .btn-util { background: rgba(30, 41, 59, 0.9); color: #cbd5e1; border: 1px solid rgba(255,255,255,0.05); }
+
+/* 2. Dark Neon Theme */
+body.theme-neon {
+    background: linear-gradient(135deg, #000000 0%, #0c0c0c 50%, #111b15 100%);
+}
+body.theme-neon .glass-container {
+    background: rgba(10, 10, 10, 0.85);
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+body.theme-neon .display-box {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+body.theme-neon .btn-num { background: rgba(20, 20, 20, 0.8); color: #fff; border: 1px solid rgba(255,255,255,0.05); }
+body.theme-neon .btn-num:hover { background: rgba(35, 35, 35, 0.9); box-shadow: 0 0 10px rgba(16,185,129,0.3); }
+body.theme-neon .btn-op { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.5); }
+body.theme-neon .btn-op:hover { background: rgba(16, 185, 129, 0.4); box-shadow: 0 0 15px rgba(16, 185, 129, 0.6); }
+body.theme-neon .btn-eq { background: #10b981; color: #000; box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); }
+body.theme-neon .btn-sci { background: rgba(20, 20, 20, 0.9); color: #34d399; border: 1px solid rgba(16,185,129,0.1); }
+body.theme-neon .btn-ac { background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); }
+body.theme-neon .btn-util { background: rgba(20, 20, 20, 0.9); color: #d1d5db; border: 1px solid rgba(255,255,255,0.05); }
+
+/* 3. Emerald Glow Theme */
+body.theme-emerald {
+    background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #021c17 100%);
+}
+body.theme-emerald .glass-container {
+    background: rgba(2, 44, 34, 0.75);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+body.theme-emerald .display-box {
+    background: rgba(1, 26, 20, 0.85);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+body.theme-emerald .btn-num { background: rgba(6, 78, 59, 0.6); color: #fff; border: 1px solid rgba(255,255,255,0.05); }
+body.theme-emerald .btn-num:hover { background: rgba(4, 120, 87, 0.8); }
+body.theme-emerald .btn-op { background: rgba(52, 211, 153, 0.3); color: #ecfdf5; border: 1px solid rgba(52, 211, 153, 0.4); }
+body.theme-emerald .btn-eq { background: #34d399; color: #064e3b; font-weight: 700; box-shadow: 0 4px 20px rgba(52, 211, 153, 0.4); }
+body.theme-emerald .btn-sci { background: rgba(6, 78, 59, 0.7); color: #a7f3d0; border: 1px solid rgba(255,255,255,0.05); }
+body.theme-emerald .btn-ac { background: rgba(244, 63, 94, 0.25); color: #fda4af; border: 1px solid rgba(244,63,94,0.4); }
+body.theme-emerald .btn-util { background: rgba(6, 78, 59, 0.8); color: #d1d5db; border: 1px solid rgba(255,255,255,0.05); }
+
+/* 4. Sunset Dusk Theme */
+body.theme-sunset {
+    background: linear-gradient(135deg, #2a0845 0%, #6441a5 50%, #2a0845 100%);
+}
+body.theme-sunset .glass-container {
+    background: rgba(42, 8, 69, 0.75);
+    border: 1px solid rgba(244, 114, 182, 0.2);
+}
+body.theme-sunset .display-box {
+    background: rgba(20, 4, 34, 0.85);
+    border: 1px solid rgba(244, 114, 182, 0.2);
+}
+body.theme-sunset .btn-num { background: rgba(100, 65, 165, 0.4); color: #fff; border: 1px solid rgba(255,255,255,0.05); }
+body.theme-sunset .btn-num:hover { background: rgba(100, 65, 165, 0.7); }
+body.theme-sunset .btn-op { background: rgba(236, 72, 153, 0.4); color: #fff; border: 1px solid rgba(236, 72, 153, 0.4); }
+body.theme-sunset .btn-eq { background: linear-gradient(to right, #ec4899, #f43f5e); color: #fff; box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4); }
+body.theme-sunset .btn-sci { background: rgba(100, 65, 165, 0.5); color: #fbcfe8; border: 1px solid rgba(255,255,255,0.05); }
+body.theme-sunset .btn-ac { background: rgba(239, 68, 68, 0.3); color: #fca5a5; border: 1px solid rgba(239,68,68,0.4); }
+body.theme-sunset .btn-util { background: rgba(100, 65, 165, 0.6); color: #f3e8ff; border: 1px solid rgba(255,255,255,0.05); }
